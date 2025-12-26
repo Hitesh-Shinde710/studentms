@@ -1,0 +1,27 @@
+{% extends 'students/base.html' %}
+
+{% block title %}add_enrollment{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Enrollment</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        form { display: inline-block; text-align: left; }
+        select, input, button { display: block; margin: 10px 0; padding: 8px; width: 300px; }
+        button { width: auto; background-color: #4CAF50; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Enroll Student in Course</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enroll</button>
+    </form>
+    <p><a href="{% url 'enrollment_list' %}">Back to Enrollments List</a></p>
+</body>
+</html>
+{% endblock %}

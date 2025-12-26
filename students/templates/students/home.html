@@ -1,0 +1,36 @@
+{% extends 'students/base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2>Welcome to the Student Management System</h2>
+  <p class="lead">Use the navigation links to manage Students, Courses, and Enrollments.</p>
+
+  <div class="row mt-4">
+    <div class="col-md-4 mb-3">
+      <div class="card text-white bg-primary h-100">
+        <div class="card-body">
+          <h5 class="card-title">Students</h5>
+          <p class="card-text fs-3">{{ total_students }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card text-white bg-success h-100">
+        <div class="card-body">
+          <h5 class="card-title">Courses</h5>
+          <p class="card-text fs-3">{{ total_courses }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card text-white bg-warning h-100">
+        <div class="card-body">
+          <h5 class="card-title">Enrollments</h5>
+          <p class="card-text fs-3">{{ total_enrollments }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

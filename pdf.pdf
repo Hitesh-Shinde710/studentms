@@ -1,0 +1,76 @@
+Project Summary: Student Management System
+
+Description:
+This Django project is a simple Student Management System (SMS) that allows managing Students, Courses, and Enrollments. It also provides features like CSV export for all entities.
+
+Features:
+
+User authentication (Login/Logout)
+
+CRUD for Students, Courses, and Enrollments
+
+Search and pagination for lists
+
+Export Students, Courses, and Enrollments to CSV
+
+Models:
+
+Student: first_name, last_name, email, date_of_birth, enrollment_date
+
+Course: name, code, description, credits
+
+Enrollment: student (FK), course (FK), enrollment_date, grade
+
+Views:
+
+List, Add, Edit, Delete views for all entities
+
+CSV export views
+
+Login & Logout views
+
+Templates:
+
+base.html
+
+student_list.html, student_form.html
+
+course_list.html, course_form.html
+
+enrollment_list.html, enrollment_form.html
+
+login.html
+
+File Structure:
+
+studentms/
+│
+├── studentms/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── students/
+│   ├── migrations/
+│   ├── templates/
+│   │   └── students/
+│   │       ├── base.html
+│   │       ├── student_list.html
+│   │       ├── student_form.html
+│   │       ├── course_list.html
+│   │       ├── course_form.html
+│   │       ├── enrollment_list.html
+│   │       ├── enrollment_form.html
+│   │       └── login.html
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+│
+├── manage.py
+└── requirements.txt

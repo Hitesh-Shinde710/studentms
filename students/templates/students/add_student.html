@@ -1,0 +1,27 @@
+{% extends 'students/base.html' %}
+
+{% block title %}add_student{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        form { display: inline-block; text-align: left; }
+        input, button { display: block; margin: 10px 0; padding: 8px; width: 300px; }
+        button { width: auto; background-color: #4CAF50; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Add New Student</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Student</button>
+    </form>
+    <p><a href="{% url 'student_list' %}">Back to Students List</a></p>
+</body>
+</html>
+{% endblock %}
