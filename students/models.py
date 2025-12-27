@@ -32,7 +32,7 @@ class Enrollment(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='enrollments')
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='enrollments')
     enrollment_date = models.DateField(auto_now_add=True)
-    grade = models.CharField(max_length=2, blank=True, null=True)  # e.g., A, B+, etc.
+    grade = models.CharField(max_length=2, blank=True, null=True)
 
     class Meta:
         unique_together = ('student', 'course')
